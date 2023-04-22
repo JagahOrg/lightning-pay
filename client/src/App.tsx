@@ -8,13 +8,10 @@ import {
   BrowserRouter as Router,
   Route,
   Routes,
-  Navigate
 } from "react-router-dom";
 
 
 // dispatch
-import {useSelector} from 'react-redux';
-import { RootState } from './store/store';
 import Spinner from './components/spinner/spinner';
 
 
@@ -26,10 +23,6 @@ const PaymentPage = lazy(() => import('./pages/payment'));
 
 // App component
 function App() {
-
-    const address = useSelector((state : RootState) => (
-       state?.currentUser?.currentUser
-    ))
       
 // JSX Component
   return  (
@@ -42,8 +35,6 @@ function App() {
                  </Suspense>
                  } />
               <Route path='/payment' element={
-                            !address 
-                             ? <Navigate to="/app"/> :
                               (
                                <Suspense fallback={<Spinner/>}>
                                   <PaymentPage />
