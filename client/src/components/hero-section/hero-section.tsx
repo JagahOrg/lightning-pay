@@ -8,7 +8,7 @@ const HeroSection :  () => JSX.Element = () => {
              <TransactionsContainer>
                 <TransactionsText>
                     You can pay over <span className="coloredText">17,000 </span>
-                     bills on <span className="coloredText">SolPayPLus</span>.
+                     bills on <span className="coloredText">LightningPay</span>.
                 </TransactionsText>
              </TransactionsContainer>
              <ImagesContainer>

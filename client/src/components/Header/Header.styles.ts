@@ -28,7 +28,7 @@ export const LogoContainer = styled.div`
 
 // logo styles
 export const Logo = styled.img`
-  width: 1.5rem;
+  width: 2rem;
   height: 2rem;
 `;
 // logo header styles
@@ -36,7 +36,7 @@ export const LogoHeader = styled.p`
   font-size: 1rem;
   font-family: "Space Grotesk";
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
 `;
 
 // header connect container styles

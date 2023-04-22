@@ -18,7 +18,7 @@ const Footer: () => JSX.Element = () => {
           </button>
         </Link>
 
-        <p>© SolPayPlus</p>
+        <p>© LightningPay</p>
       </FooterD>
     </FooterContainer>
   );

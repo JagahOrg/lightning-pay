@@ -31,19 +31,15 @@ import { useLocation } from "react-router-dom";
 import {useSelector} from 'react-redux'
 import { RootState } from "../../store/store";
 
-// import pay with solana pay
-import { getCustomerName, payWithSolanaPay } from "../../utils/requests";
-
-// import web 3 utils
-import { useWallet } from "@solana/wallet-adapter-react";
+// import pay
+import { getCustomerName } from "../../utils/requests";
 
 // import useDispatch
 import {useDispatch} from 'react-redux';
-import { ObjectType } from "typescript";
-import { PublicKey } from "@solana/web3.js";
 
 import { alert, close} from "../../store/alert/alert.modal.reducer";
 import Spinner from "../spinner/spinner";
+import axios from "axios";
 
 //JSX Component
 const PayBill = () => {
@@ -54,13 +50,10 @@ const PayBill = () => {
     // dispatch
     const dispatch  = useDispatch();
 
+
     // selector
     const bills = useSelector((state: RootState) => state?.currentUser?.bills)
-    //rewards
-    const rewards = useSelector((state: RootState) => state?.currentUser?.rewards)
-    console.log(rewards);
-   console.log(bills, 'bills')
-   const  {publicKey} : PublicKey | any= useWallet();
+    
 
    const billsName : string[] = bills?.map((bill : any) => ({
     value: bill.name,
@@ -86,9 +79,10 @@ const PayBill = () => {
     const [phone, setPhone] : DropdownSelectType = useState("");
 
     // handle payment
-    const handlePay = async () => {
-        const usdAmount : string | number = amount[0] === 0 ? (nairaAmount/750).toFixed(2)  : (result?.amount/750).toFixed(2)
-        const naira = amount[0] === 0 ? nairaAmount : result?.amount
+    const handlePay = async (e : React.FormEvent<HTMLFormElement> | any) => {
+        e.preventDefault()
+        // const usdAmount : string | number = amount[0] === 0 ? (nairaAmount/750).toFixed(2)  : (result?.amount/750).toFixed(2)
+        // const naira = amount[0] === 0 ? nairaAmount : result?.amount
         const customer =   category === "electricity" || category === "cable" ? meter : phone
 
          if(!bills[0]?.label_name || !customer) {
@@ -97,14 +91,10 @@ const PayBill = () => {
                 dispatch(close(""))
             }, 700)
          }
-       await payWithSolanaPay(publicKey, 
-                              usdAmount, 
-                              bills[0]?.label_name,
-                              dispatch, 
-                              bills[0]?.country,customer,
-                              bills[0]?.biller_name,
-                              naira , category
-                              )
+      // handle payment with btc
+      const newWindow = window.open("https://btcpay0.voltageapp.io/apps/5wMxeDQ3YSs1ws6yU8CDY8HGif3/pos", '_blank', 'noopener,noreferrer')
+      if (newWindow) newWindow.opener = null
+
             }
 
     // handle customer name
@@ -123,7 +113,10 @@ const PayBill = () => {
             <PayBillHeader>{
              `${category} Recharge`}</PayBillHeader>
 
-            <PayBillForm>
+            <PayBillForm 
+            //    ref={formRef}
+               onSubmit={handlePay}
+                >
             <PayBillGroup>
                     <PayBillLabel>Network Provider</PayBillLabel>
                     <Select
@@ -188,7 +181,7 @@ const PayBill = () => {
                        />
                     }
                   
-                    </PayBillGroup>
+               </PayBillGroup>
                   <PayBillGroup>
                     <PayBillLabel>Amount</PayBillLabel>
                     <PayBillAmoutCont>
@@ -207,16 +200,11 @@ const PayBill = () => {
                 </PayBillGroup>
 
                 <PayBillButtonDiv>
-                    <PayBillButton onClick={handlePay}>
+                    <PayBillButton type="submit">
                         Pay with 
                         <img src="/assets/Vector.png" className = "payBackIcon" alt="" />
                         <span className="boldText">Pay</span>
                     </PayBillButton>
-
-                    <PayBillButtonTwo>
-                        Pay with Cashback Balance
-                    </PayBillButtonTwo>
-                    <PayBillPrice>₦{!rewards?.data?.balance ? "0" : rewards?.data?.balance}</PayBillPrice>
 
                 </PayBillButtonDiv>
 

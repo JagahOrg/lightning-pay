@@ -10,6 +10,11 @@ export const PayBillContainer = styled.div`
     font-family: 'Space Grotesk';
     font-style: normal;
 
+    .react-tel-input {
+        border : 1px solid #959595;
+        background : rgba(255,131,0,0.05) !important;
+    }
+
     .css-b62m3t-container{
         width : 26rem;
 
@@ -34,8 +39,18 @@ export const PayBillContainer = styled.div`
             width : 100%;
         }
     }
+    input {
+        background : rgba(255,131,0,0.05) !important;
+    }
+    .flag-dropdown {
+        background : rgba(255,131,0,0.005) !important;
+    }
+    .form-control {
+        background : rgba(255,131,0,0.005) !important;
+    }
     .input {
         width : 24.2rem;
+        
         @media screen and (max-width : 470px) and (min-width : 400px) {
             width : 90%;
         }
@@ -86,7 +101,7 @@ export const PayBillHeader = styled.span`
 `
 
 // pay bill form styles
-export const PayBillForm = styled.div`
+export const PayBillForm = styled.form`
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -126,6 +141,7 @@ export const PayBillInput = styled.input`
     border-radius   :5px ;
     outline : none;
     padding : 0.85rem;
+    background : rgba(255, 131, 0, 0.05);
 `
 
 export const PayBillAmountIn = styled.div`

@@ -12,7 +12,7 @@ const SplashSection: () => JSX.Element = () => {
           <h2> Pay Your Bills Hassle-Free with</h2>
           <h2>
             {" "}
-            <img src="/assets/Vector.png" alt="solana icon" /> Pay
+            <img src="/assets/Vector.png" alt="bitcoin icon" /> Bitcoin
           </h2>
         </span>
         <p>
