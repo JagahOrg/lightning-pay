@@ -32,15 +32,7 @@ export const TransactionsText = styled.span`
   font-weight: 700;
 
   .coloredText {
-    background: linear-gradient(
-      44.77deg,
-      #9945ff 10.43%,
-      #8752f3 30.85%,
-      #5497d5 49.4%,
-      #43b4ca 58.68%,
-      #28e0b9 69.82%,
-      #19fb9b 93.02%
-    );
+    background: linear-gradient(180deg, #FFDA00 0%, #FF8300 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

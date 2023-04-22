@@ -86,7 +86,7 @@ export const PayBillHeader = styled.span`
 `
 
 // pay bill form styles
-export const PayBillForm = styled.div`
+export const PayBillForm = styled.form`
     display: flex;
     flex-direction: column;
     gap: 1rem;

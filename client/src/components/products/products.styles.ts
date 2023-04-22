@@ -115,7 +115,7 @@ export const ProductsBoxesContainer = styled.div`
 export const ProductsBox = styled.div<Props>`
     padding: 3rem 0 2rem 0;
     cursor : pointer;
-    background-color: ${Props => Props.notPart ? "transparent" : "#F2F2F2"};
+    background-color: ${Props => Props.notPart ? "transparent" : "#FFF8F1"};
 
     display: flex;
     align-items: center;

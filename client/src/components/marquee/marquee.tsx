@@ -10,19 +10,17 @@ const MarqueeDiv = () => {
        <MarqueeContainer>
           <Marquee gradient={false} speed={20}>
         <ul>
-         <li>SolPayPLus has big dreams</li>
-         <li>Leveraging solana pay.</li>
+         <li>LightningPay has big dreams</li>
+         <li>Leveraging Lightning. ⚡️</li>
+         <li>Pay for Utility Bills with Bitcoin</li>
+         <li>Lightning has big dreams 💫</li>
          <li>Pay for Utility Bills with Crypto</li>
-         <li>SolPayPLus has big dreams</li>
-         <li>Pay and receive rewards.</li>
+         <li>LightningPay has big dreams</li>
          <li>Pay for Utility Bills with Crypto</li>
-         <li>SolPayPLus has big dreams</li>
-         <li>receive cashback rewards on every payment.</li>
-         <li>Pay for Utility Bills with Crypto</li>
-         <li>SolPayPLus has big dreams</li>
-         <li>Pay for Utility Bills with Crypto</li>
-         <li>SolPayPLus has big dreams</li>
-         <li>Pay for Utility Bills with Crypto</li>
+         <li>LightningPay has big dreams</li>
+         <li>Pay for Utility Bills with Bitcoin</li>
+         <li>LightningPay has big dreams</li>
+         <li>Pay for Utility Bills with Crypto ⚡️</li>
        </ul>
       </Marquee>
        </MarqueeContainer>

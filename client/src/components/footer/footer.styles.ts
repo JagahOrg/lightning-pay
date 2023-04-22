@@ -48,11 +48,12 @@ export const FooterD = styled.div`
   button {
     margin: 2rem 0rem 0rem;
     border-radius: 0.3rem;
-    border: solid 1px white;
+    border: solid 1px linear-gradient(180deg, #FFDA00 0%, #FF8300 100%);
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 0.4rem;
+    background: linear-gradient(180deg, #FFDA00 0%, #FF8300 100%);
     padding: 0.5rem 0.5rem;
 
     span {

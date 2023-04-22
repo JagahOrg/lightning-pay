@@ -2,7 +2,6 @@
 // import lazy and suspense from react
 import { lazy, Suspense } from 'react';
 
-import { useMemo } from 'react';
 import LandingPage from './pages/Landing';
 // import  routes from router-dom;
 import {
@@ -22,7 +21,7 @@ import Spinner from './components/spinner/spinner';
 // import pages that makes up the app;
 const ServicesPage = lazy(() => import('./pages/services'));
 const PaymentPage = lazy(() => import('./pages/payment'));
-const TransactionsPage = lazy(() => import('./pages/transactions'));
+
 
 
 // App component
@@ -51,15 +50,6 @@ function App() {
                                </Suspense>
                               )} 
                               />
-              <Route path='/transactions' element={
-                                !address
-                                 ? <Navigate to="/app"/>
-                                 :(
-                                  <Suspense fallback={<Spinner/>}>
-                                    <TransactionsPage/>
-                                  </Suspense>
-                                 )}
-                                  />
             </Routes>
            </Router>
       );

@@ -18,14 +18,10 @@ import { getBills } from "../../utils/requests";
 
 // use navigate
 import { useNavigate } from "react-router-dom";
-import {useDispatch, useSelector} from 'react-redux';
-import { RootState } from "../../store/store";
-import { alert, close } from "../../store/alert/alert.modal.reducer";
+import {useDispatch} from 'react-redux';
+
 
 const Products = () => {
-    const address = useSelector((state: RootState) => (
-        state.currentUser?.currentUser
-    ))
     const [selectedOption, setSelectedOption] = useState(options[0]);
     // const [category, setCategory] = useState("")
     const dispatch= useDispatch()
@@ -33,12 +29,6 @@ const Products = () => {
     const Navigate = useNavigate();
     // sort bill payments and link
     const payService = async (category : string) => {
-        if(!address) {
-           dispatch(alert("Connect Wallet ⛔️"));    
-           return setTimeout(() => {
-              dispatch(close(""))
-           }, 1000)
-        }
         //   setCategory(category)
          await getBills(selectedOption?.value, category, Navigate, dispatch);
     }

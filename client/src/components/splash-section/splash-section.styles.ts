@@ -79,7 +79,7 @@ export const SplashLeft = styled.div`
   }
 
   button {
-    background: #2c2c2c;
+    background: linear-gradient(180deg, #FFDA00 0%, #FF8300 100%);
     width: 9rem;
     justify-content: center;
     display: flex;
