@@ -8,6 +8,8 @@ https://www.figma.com/file/9eTiQVaYwctk0MDFldAqpv/Lightning-pay?node-id=1-2&t=QA
 Voltage: Lightning Node and BTC Pay Server
 
 Payment Button Example Code from Voltage
+
+```
 <form method="POST" action="https://btcpay0.voltageapp.io/apps/5wMxeDQ3YSs1ws6yU8CDY8HGif3/pos">
         <input type="hidden" name="email" value="customer@example.com" />
         <input type="hidden" name="orderId" value="CustomOrderId" />
@@ -15,3 +17,4 @@ Payment Button Example Code from Voltage
         <input type="hidden" name="redirectUrl" value="https://example.com/thanksyou" />
         <button type="submit" name="choiceKey" value="lightning-pay">Buy now</button>
       </form>
+```
