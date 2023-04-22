@@ -31,7 +31,7 @@ import { useLocation } from "react-router-dom";
 import {useSelector} from 'react-redux'
 import { RootState } from "../../store/store";
 
-// import pay with solana pay
+// import pay
 import { getCustomerName } from "../../utils/requests";
 
 // import useDispatch
@@ -92,20 +92,9 @@ const PayBill = () => {
             }, 700)
          }
       // handle payment with btc
+      const newWindow = window.open("https://btcpay0.voltageapp.io/apps/5wMxeDQ3YSs1ws6yU8CDY8HGif3/pos", '_blank', 'noopener,noreferrer')
+      if (newWindow) newWindow.opener = null
 
-  const formData = new FormData(e?.target);
-
-  console.log(formData)
-
-  // make an Axios request to the action URL
-  axios.post(e.target.action, formData)
-    .then(response => {
-      console.log(response); // handle the response as needed
-    })
-    .catch(error => {
-      console.error(error); // handle any errors that occur
-    });
-    //    formRef.current.submit();
             }
 
     // handle customer name
@@ -127,8 +116,6 @@ const PayBill = () => {
             <PayBillForm 
             //    ref={formRef}
                onSubmit={handlePay}
-                method="POST" 
-                action="https://btcpay0.voltageapp.io/apps/5wMxeDQ3YSs1ws6yU8CDY8HGif3/pos"
                 >
             <PayBillGroup>
                     <PayBillLabel>Network Provider</PayBillLabel>
@@ -194,7 +181,7 @@ const PayBill = () => {
                        />
                     }
                   
-                    </PayBillGroup>
+               </PayBillGroup>
                   <PayBillGroup>
                     <PayBillLabel>Amount</PayBillLabel>
                     <PayBillAmoutCont>
