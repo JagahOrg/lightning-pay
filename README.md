@@ -83,7 +83,7 @@ easier to provide mobile payment solutions.
 - [Live](https://lightning-pay.netlify.app/)
 - [Figma](https://www.figma.com/file/9eTiQVaYwctk0MDFldAqpv/Lightning-pay?node-id=1-2&t=QAnn8Dw4hBUbbRIr-0)
 - [Youtube](https://youtu.be/04jbMaiNWkQ)
-- [Deck]()
+- [Deck](https://drive.google.com/file/d/1LUdGf0Z3_s9Xy_gcMlKQ8NmOR0_obsmT/view)
 
 
 ## 📃 Developer Resources.
