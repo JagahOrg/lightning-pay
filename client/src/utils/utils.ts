@@ -28,7 +28,7 @@ export const customStyles : CustomStylesType | any = {
     indicatorSeparator: () => ({ display: 'none' }),
     dropdownIndicator: (provided: any, state: { isFocused: boolean, isHovered : boolean }) => ({
         ...provided,
-        color: state.isFocused ? 'black' : '#B2B2B2',
+        color: state.isFocused ? ' #002846' : '#B2B2B2',
         transform: state.isFocused || state?.isHovered ? 'rotate(180deg)' : null,
         transition: 'transform 0.2s ease-in-out',
         cursor: "pointer",
@@ -37,7 +37,7 @@ export const customStyles : CustomStylesType | any = {
       ...provided,
       display: 'flex', // display single value as flex
       alignItems: 'center', // center contents vertically,
-      color : "black",
+      color : " #002846",
       fontSize : "0.8rem",
 
     }),
@@ -47,7 +47,7 @@ export const customStyles : CustomStylesType | any = {
       alignItems: 'center', // center contents vertically
       paddingLeft: '30px', // add left padding to accommodate icon
       background: state.isSelected ? '#eee' : 'rgba(255, 131, 0, 0.05);', // highlight selected option
-      color : "black",
+      color : " #002846",
       fontSize : "0.8rem",
       cursor : "pointer"
 

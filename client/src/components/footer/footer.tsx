@@ -9,6 +9,7 @@ const Footer: () => JSX.Element = () => {
   return (
     <FooterContainer>
       <FooterD>
+        <img src="/assets/LightningBig.png" alt="footer lightning icon" className="img" />
         <h2 className="p">What are you waiting for?</h2>
         <h2>Get started! </h2>
         <Link to="/app">
@@ -17,8 +18,10 @@ const Footer: () => JSX.Element = () => {
             <img src="/assets/ArrowRight.png" alt="arrow " />
           </button>
         </Link>
+        
 
         <p>© LightningPay</p>
+        <img src="/assets/LightningBig2.png" alt="footer lightning icon" className="img2"/>
       </FooterD>
     </FooterContainer>
   );

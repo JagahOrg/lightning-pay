@@ -52,7 +52,7 @@ const AlertConfirmation = () => {
               justifyContent: "center",
               textTransform: "uppercase",
               border: "1px solid white",
-              background: "black",
+              background: " #002846",
               padding: "20px"
             }}
             onClick={() => {
@@ -66,7 +66,7 @@ const AlertConfirmation = () => {
           padding : "3px", 
           fontSize : "12px",
           fontWeight : "bold",
-          color :  "black",
+          color :  " #002846",
           fontFamily: 'Space Grotesk',
           fontStyle: "normal",
           display : "flex",

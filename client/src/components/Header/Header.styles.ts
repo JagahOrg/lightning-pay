@@ -37,6 +37,8 @@ export const LogoHeader = styled.p`
   font-family: "Space Grotesk";
   font-style: normal;
   font-weight: 700;
+  color : #002846;
+
 `;
 
 // header connect container styles

@@ -65,6 +65,7 @@ export const ProductsTopLeft = styled.span`
      font-family: 'Space Grotesk';
      font-style: normal;
      font-weight: 700;
+     color:  #002846;
 
     @media only screen and (max-width: 556px) {
         font-size: 1.3rem;
@@ -149,5 +150,6 @@ export const ProductsBoxIcon = styled.img`
 export const ProductsBoxText = styled.span`
     font-weight: 500;
     font-size: 0.9rem;
+    color :  #002846;
 `
 

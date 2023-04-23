@@ -14,13 +14,42 @@ export const FooterContainer = styled.div`
 `;
 // footer D styles
 export const FooterD = styled.div`
+  position : relative;
   display: flex;
-  background: black;
+  background:  #002846;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 0.8rem 0.8rem 0rem 0rem;
 
+  .img {
+    position : absolute;
+    left: -2rem;
+    top: -5rem;
+
+    @media screen and (max-width : 660px) {
+       top: -2.5rem;
+       left: -1.7rem;
+    }
+
+  }
+
+  img {
+    width : 10rem;
+
+    @media screen and (max-width : 660px) {
+      width : 6rem;
+    }
+  }
+  .img2 { 
+    position : absolute;
+    bottom: 0rem;
+    right: -4rem;
+
+    @media screen and (max-width : 660px) {
+      right: -2rem;
+   }
+  }
   @media only screen and (max-width: 768px) {
     padding: 15px;
   }

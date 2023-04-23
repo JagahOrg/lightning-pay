@@ -95,6 +95,7 @@ export const PayBillHeader = styled.span`
     font-weight : 700;
     text-transform : capitalize;
     margin-left : 30px;
+    color :  #002846;
     @media only screen and (max-width: 488px) {
         margin-left: 1rem;
     }

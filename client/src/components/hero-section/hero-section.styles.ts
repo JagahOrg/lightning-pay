@@ -18,7 +18,7 @@ export const TransactionsContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: black;
+  background-color:  #002846;
   margin: 2rem 0rem 0rem 0rem;
 `;
 

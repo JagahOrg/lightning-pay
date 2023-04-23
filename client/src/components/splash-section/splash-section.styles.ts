@@ -35,7 +35,7 @@ export const SplashLeft = styled.div`
     font-style: normal;
     font-weight: 700;
     line-height: 4rem;
-    color: #2c2c2c;
+    color:  #002846;
 
     @media screen and (max-width: 800px) and (min-width: 649px) {
       font-size: 2.5rem;
@@ -71,6 +71,8 @@ export const SplashLeft = styled.div`
     overflow-wrap: break-word;
     line-height: 1.9rem;
     padding: 1.5rem 0rem 0rem 0rem;
+    color: #002846;
+
 
     @media screen and  (max-width : 400px) {
         inline-size : unset;
